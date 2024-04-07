@@ -1,0 +1,7 @@
+.nav-item:hover .nav-link {
+    color:  #A4E3B1; /* Replace with your desired color */
+  }
+.btn-primary {
+    color: #A4E3B1;
+    background-color: #A4E3B1;
+}

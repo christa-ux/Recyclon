@@ -20,10 +20,10 @@
 
         <!--navbar-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-            <div class="container-fluid ">
+            <div class="container-fluid">
                <a class="navbar-brand text-center" href="mainPage.html">
       <img src="pictures/leaf-logo.png"  width="50" height="44" class="d-inline-block align-text-top" alt="Smart Recycling"> 
-      <span class="ms-2"> Smart Recycling</span>
+      
     </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
                 <ul class="navbar-nav ms-auto">
                   
                   <li class="nav-item">
-                    <a class="nav-link" href="mainPage.html#about">About us</a>
+                    <a class="nav-link" href="mainPage.html#aboutapp">About the app</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#mainPage.html#earthNow">Earth Now</a>
@@ -41,7 +41,12 @@
                     <a class="nav-link" href="#mainPage.html#solution">Our Solution</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="mainPage.html#howItWorks">How it works</a>
+                    <a class="nav-link" href="mainPage.html#team">The Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <button  class="btn btn btn-outline-primary btn-sm mt-2 ms-1" onclick="myFunction()">mode</button>
+                  </div>
+                  
                   </li>
                   
                 </ul>
@@ -50,33 +55,98 @@
           </nav>
 
         <!--"about" section-->
-        <section id="about">
-              <div class="container">
-                  <div class="row">
-                      <div class="col-lg-7 mt-3">
-                          <h2 >Smart Recycling System</h2>
-                          <p>Our app uses image recognition to tell the user if an item is recyclable, and how to recycle it. It also provides feedback, aiming at educating the user on recycling practices</p>
-                          <button type="button" class="btn btn-primary btn-lg mx-auto d-block">More info</button>
-                      </div>
-                      <div class="col-lg-5">
-                        <img src="pictures/leaf-logo.png" class=" img-fluid mx-auto d-block" 
-                        alt="header picture">
-                      </div>
-                  </div>
+        <section id="aboutapp">
+          <div class="card ms-5 me-5 mt-2 mb-2">
+            <div class="row g-0">
+              <div class="col-lg-7">
+                <div class="card-body">
+                  <h5 class="card-title h1">Smart Recycling System</h5>
+                  <p class="card-text h5">Our app uses image recognition to tell the user if an item is recyclable, and how to recycle it.
+                     It also provides feedback, aiming at educating the user on recycling practices</p>
+                 
+                  <a class="btn btn-primary btn-lg mt-2" href="moreInfo.html">More info</a>
+                </div>
               </div>
-
+              <div class="col-lg-5">
+                <img src="pictures/leaf-logo.png" class="img-fluid mx-auto d-block" alt="..." style="height: 350px; width: auto; margin-top: -20px;">
+              </div>
+              
+            </div>
+          </div>
           </section>
-
+<hr style="color: #A4E3B1; ">
 <section id="earthNow">
+  <div class="card m-5">
+<!--
+1- Pollution situation on Earth now
+2- What is recycling
+3- how is recycling beneficial (impacts of recycling on the planet)
+--> 
+
+  <div class="row ">
+    
+    <div class="col-lg-12">
+      <div class="card-body">
+        <h5 class="card-title h1">Earth Now</h5>
+        <p class="card-text h5">Our app uses image recognition to tell the user if an item is recyclable, and how to recycle it.
+           It also provides feedback, aiming at educating the user on recycling practices</p>
+       
+        
+      </div>
+    </div>
+    
+    
+
+</div>
+<div class="row">
+  <div class="col-lg-4 col-md-12 ">
+    <div class="card border-primary mb-3 earth" style="max-width: 18rem;">
+     
+      <div class="card-body text-primary">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12">
+    <div class="card border-primary mb-3 earth" style="max-width: 18rem;">
+      
+      <div class="card-body text-primary">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-12">
+    <div class="card border-primary mb-3 earth" style="max-width: 18rem;">
+     
+      <div class="card-body text-primary">
+        <h5 class="card-title">Primary card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
 
 </section>
+<hr>
 
 <section id="solution">
+  
 
 </section>
-<section id="howItWorks">
+<hr>
+<section id="team">
+  <div class="card ms-5 me-5 mt-2 mb-2"></div>
 
 </section>
+
+
+
+
 
         <!--Custom js and bootstrap js library-->
         <script src="js/index.js"></script>

@@ -1,9 +1,51 @@
+/*toggle for light/dark mode*/
+.dark-mode {
+  background-color: #16161a;
+  color: white;
+}
+.dark-mode .card {
+background-color: #16161a;
+color: white;
+  }
+
+   .earth {
+    background-color: #A4E3B1;
+    border: #004643 !important;
+  }
+  .dark-mode nav  {
+  background-color: #16161a !important;
+  color: white !important;
+  border: white 2px !important;
+  }
+  
+
 .nav-item:hover .nav-link {
     color:  #A4E3B1; /* Replace with your desired color */
   }
 .btn-primary {
-    color: black !important;
+    color: #16161a !important;
     background-color: #A4E3B1  !important;
     border: #A4E3B1;
 }
+.card-text {
+  font-weight:lighter;
+}
+.card {
+  border: none;
+  
+}
 
+.btn-outline-primary {
+  background-color: #A4E3B1  !important;
+  color:#16161a !important;
+  border:#A4E3B1 !important;
+}
+
+
+/*
+ dark green: #004643
+ light green: #A4E3B1
+ black:#16161a
+ white 
+
+*/

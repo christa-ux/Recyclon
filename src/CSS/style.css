@@ -2,6 +2,8 @@
     color:  #A4E3B1; /* Replace with your desired color */
   }
 .btn-primary {
-    color: #A4E3B1;
-    background-color: #A4E3B1;
+    color: black !important;
+    background-color: #A4E3B1  !important;
+    border: #A4E3B1;
 }
+

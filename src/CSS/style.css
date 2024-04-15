@@ -19,8 +19,9 @@ color: white;
   
 
 .nav-item:hover .nav-link {
-    color:  #A4E3B1; /* Replace with your desired color */
+    color:  #A4E3B1; 
   }
+
 .btn-primary {
     color: white !important;
     background-color: #004643  !important;
@@ -54,6 +55,16 @@ color: white;
   margin-right: auto;
   width: 50%;
 }
+
+
+.teamPictures {
+  width: 18rem;
+  height:380px;
+}
+
+
+
+
 /*
  dark green: #004643
  light green: #A4E3B1

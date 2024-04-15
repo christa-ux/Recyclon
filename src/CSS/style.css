@@ -7,11 +7,10 @@
 background-color: #16161a;
 color: white;
   }
-
    .earth {
     background-color: #A4E3B1;
-    border: #004643 !important;
-  }
+   }
+
   .dark-mode nav  {
   background-color: #16161a !important;
   color: white !important;
@@ -23,16 +22,21 @@ color: white;
     color:  #A4E3B1; /* Replace with your desired color */
   }
 .btn-primary {
-    color: #16161a !important;
-    background-color: #A4E3B1  !important;
+    color: white !important;
+    background-color: #004643  !important;
     border: #A4E3B1;
+
 }
 .card-text {
   font-weight:lighter;
 }
+.pollutionConsequence {
+  border: solid black 2px;
+  border-radius: 10px;
+  background-color: #FFFFFF !important;
+}
 .card {
   border: none;
-  
 }
 
 .btn-outline-primary {
@@ -40,8 +44,16 @@ color: white;
   color:#16161a !important;
   border:#A4E3B1 !important;
 }
-
-
+.wwfimage {
+  height:500px !important;
+  width:auto !important;
+  justify-content: center;
+  align-items: baseline;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 /*
  dark green: #004643
  light green: #A4E3B1

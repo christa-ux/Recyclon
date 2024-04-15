@@ -14,8 +14,12 @@ color: white;
   .dark-mode nav  {
   background-color: #16161a !important;
   color: white !important;
-  border: white 2px !important;
+
   }
+
+  /* .dark-mode .resource {
+  color: #A4E3B1 !important;
+} */
   
 
 .nav-item:hover .nav-link {
@@ -61,7 +65,6 @@ color: white;
   width: 18rem;
   height:380px;
 }
-
 
 
 

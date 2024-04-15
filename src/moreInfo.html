@@ -22,6 +22,22 @@ We get to this page after clicking on "more info" in the "about" section
     <title> Smart Recycling System-more info</title>
     </head>
     <body>
+      <script>
+        if(localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+        </script>
+    
+        <!-- Your body content here -->
+    
+        <button onclick="logout()">Logout</button>
+    
+        <script>
+        function logout() {
+            localStorage.setItem('loggedIn', 'false');
+            window.location.href = 'login.html';
+        }
+        </script>
          <!--navbar-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary ">
             <div class="container-fluid">

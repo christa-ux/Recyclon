@@ -40,9 +40,9 @@
                             </div>
                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                 <a class="small" href="password.html">Forgot Password?</a>
-                                <button class="btn btn-primary" type="submit">Login</button>
+                                <button class="btn btn-primary" type="button" onclick="login()">Login</button>
                             </div>
-                        </form>
+                        </form>                        
                     </div>
                     <div class="card-footer text-center py-3">
                         <div class="small"><a href="register.html">Need an account? Sign up!</a></div>
@@ -55,18 +55,18 @@
     <!-- Bootstrap JS -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        var username = document.getElementById('inputUsername').value;
-        var password = document.getElementById('inputPassword').value;
-
-        if(username === 'john' && password === 'lol123') {
-            window.location.href = 'index.html';
-        } else {
-            alert('Invalid username or password');
+        function login() {
+            var username = document.getElementById('inputUsername').value;
+            var password = document.getElementById('inputPassword').value;
+        
+            if(username === 'john' && password === 'lol123') {
+                localStorage.setItem('loggedIn', 'true');
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid username or password');
+            }
         }
-    });
-    </script>
+        </script>
+        
 </body>
 </html>

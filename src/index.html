@@ -23,6 +23,9 @@
         if(localStorage.getItem('loggedIn') !== 'true') {
             window.location.href = 'login.html';
         }
+        if (localStorage.getItem('dark-mode') === 'true') {
+        document.body.classList.add("dark-mode");
+        }
         </script>
     
         <!--navbar-->

@@ -2,7 +2,14 @@
 
 ## About 
 
-Our web-app called "Smart Recycling System" aims at improving the sorting of recyclables from non-recyclables using image recognition, which can reduce contamination and increasing recycling rates. This system will provide immediate feedback to users, educating them on proper recycling practices and contributing to long-term behavioral change. 
+Our app called "Smart Recycling" aims at improving the sorting of recyclables from non-recyclables using image recognition. 
+
+When a user scans an object, the app returns a feedback to the user about the appropriate bin for that item.
+
+Recycling has never been easy, and not everyone has been taught how to recycle. 
+
+That's how our app comes in handy. Not only does it teach the users how to recycle, but it has a point system, encouraging them to keep recycling and compete with their friends.
+
 
 ## Team Members
 

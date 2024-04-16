@@ -14,8 +14,12 @@ color: white;
   .dark-mode nav  {
   background-color: #16161a !important;
   color: white !important;
-  border: white 2px !important;
+
   }
+
+  /* .dark-mode .resource {
+  color: #A4E3B1 !important;
+} */
   
 
 .nav-item:hover .nav-link {
@@ -63,8 +67,22 @@ color: white;
 }
 
 
+.colorKit{
+  justify-content: center;
+  align-items: baseline;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
-
+}
+.typography {
+  justify-content: center;
+  align-items: baseline;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:350px;
+}
 /*
  dark green: #004643
  light green: #A4E3B1

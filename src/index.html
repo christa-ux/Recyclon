@@ -18,42 +18,57 @@
 
 
     <body> 
-
-        <!--navbar-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-            <div class="container-fluid">
-               <a class="navbar-brand text-center" href="index.html">
-      <img src="pictures/leaf-logo.png"  width="50" height="44" class="d-inline-block align-text-top" alt="Smart Recycling"> 
       
-    </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                  
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html#aboutapp">About the app</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html#earthNow">Earth Now</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html#solution">Our Solution</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html#team">The Team</a>
-                  </li>
-                  <li class="nav-item">
-                    <button  class="btn btn btn-outline-primary btn-sm mt-2 ms-1" onclick="myFunction()">mode</button>
-                  </div>
-                  
-                  </li>
-                  
-                </ul>
-              </div>
-            </div>
-          </nav>
+      <script>
+        if(localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+        </script>
+    
+        <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+      <div class="container-fluid">
+         <a class="navbar-brand text-center" href="index.html">
+              <img src="pictures/leaf-logo.png"  width="50" height="44" class="d-inline-block align-text-top" alt="Smart Recycling"> 
+          </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#aboutapp">About the app</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#earthNow">Earth Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#solution">Our Solution</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#team">The Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li> 
+            <li class="nav-item">
+              <button  class="btn btn btn-outline-primary btn-sm mt-2 ms-1" onclick="myFunction()">mode</button>
+            </li>
+            <li class="nav-item">
+              <button class="btn btn-outline-primary btn-sm mt-2 ms-1" onclick="logout()">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      function logout() {
+          localStorage.setItem('loggedIn', 'false');
+          window.location.href = 'login.html';
+      }
+      </script>
 
         <!--"about" section-->
         <section id="aboutapp">
@@ -61,7 +76,7 @@
             <div class="row g-0">
               <div class="col-lg-7">
                 <div class="card-body">
-                  <h1 class="h1" style="font-size:50px;">Smart Recycling System</h1>
+                  <h5 class="h1" style="font-size:50px;">Smart Recycling System</h5>
                   <p class="card-text h5 my-3" style="font-size: 25px;">Our app uses image recognition to tell the user if an item is recyclable, and how to recycle it.
                      It also provides feedback, aiming at educating the user on recycling practices</p>
                  
@@ -69,7 +84,7 @@
                 </div>
               </div>
               <div class="col-lg-5">
-                <img src="pictures/leaf-logo.png" class="img-fluid mx-auto d-block" style="height: 350px; width: auto; margin-top: -20px;">
+                <img src="pictures/leaf-logo.png" class="img-fluid mx-auto d-block" alt="..." style="height: 350px; width: auto; margin-top: -20px;">
               </div>
               
             </div>
@@ -86,8 +101,8 @@
   <div class="row ">
     <div class="col-lg-12 col-md-12">
       <div class="card-body">
-        <h1 class="h1 " style="font-size:50px;">Earth Now</h1>
-        <p class="card-text h6 my-3" style="font-size: 25px;">Some major consequences of not recycling</p>
+        <h5 class="h1 " style="font-size:50px;">Earth Now</h5>
+        <p class="card-text h5 my-3" style="font-size: 25px;">Some major consequences of not recycling</p>
       </div>
     </div>
   
@@ -96,7 +111,7 @@
   <div class="col-lg-4 col-md-12 ">
     <div class="card mb-3 earth ms-3">
       <div class="card-body  pollutionConsequence">
-        <h5 class="card-title pollutionConsequences" >Resource Depletion</h5>
+        <h5 class="card-title" >Resource Depletion</h5>
         <p class="card-text">Harmed ecosystems, endangered wildlife and humanity</p>
         <a href="earthNowDetailed.html" class="btn btn-primary">Learn More!</a>
       </div>
@@ -106,7 +121,7 @@
   <div class="col-lg-4 col-md-12 ">
     <div class="card  mb-3 earth  ms-3" >
       <div class="card-body  pollutionConsequence">
-        <h5 class="card-title pollutionConsequences">Environmental Pollution</h5>
+        <h5 class="card-title">Environmental Pollution</h5>
         <p class="card-text">Scarcity, increased environmental damage, high costs</p>
         <a href="earthNowDetailed.html" class="btn btn-primary">Learn More!</a>
       </div>
@@ -116,7 +131,7 @@
   <div class="col-lg-4 col-md-12 ">
     <div class="card  mb-3 earth ms-3">
       <div class="card-body  pollutionConsequence">
-        <h5 class="card-title pollutionConsequences " >Waste Management</h5>
+        <h5 class="card-title" >Waste Management</h5>
         <p class="card-text">illegal dumping, exporting waste to other regions</p>
         <a href="earthNowDetailed.html" class="btn btn-primary">Learn More!</a>
       </div>
@@ -133,14 +148,8 @@
     <div class="row ">
       <div class="col-lg-12 col-md-12">
         <div class="card-body">
-          <h1 class="h1 " style="font-size:50px;">Our Solution</h1>
-          <p class="card-text h5 my-3" style="font-size: 25px;">Traditional recycling practices can be challenging and confusing, and not everyone has been taught how to recyle. <br>
-          That's where our app comes in! <br><br>
-
-          <strong>Smart Recycling</strong> uses image recognition to identify the object to be recycled (or not recycled). <br><br>
-          <h5 class="h3" style="color:#004643;" >Deep dive into technicalities</h5>
-
-         </p>
+          <h5 class="h1 " style="font-size:50px;">Our Solution</h5>
+          <p class="card-text h5 my-3" style="font-size: 25px;">Traditional recycling practices can be challenging or confusing</p>
         </div>
         </div>
         </div>
@@ -154,22 +163,22 @@
     <div class="row ">
       <div class="col-lg-12 col-md-12">
         <div class="card-body">
-          <h1 class="h1 " style="font-size:50px;">The team</h1>
+          <h5 class="h1 " style="font-size:50px;">The team</h5>
           <p class="card-text h5 my-3" style="font-size: 25px;">Our team is composed of 5 wonderful hard-working students</p>
         </div>
       </div>
 </div>
 <div class="row mb-3 justify-content-center"> 
-          <div class="card col-lg-4 m-2" style="width: 19rem;">
+          <div class="card col-lg-4" style="width: 19rem;">
             <img src="pictures/christa.jpg" class="card-img-top teamPictures">
             <div class="card-body">
               <p class="card-text text-center" style="font-weight: bold; margin-bottom: 0px;">Christa Abou Arraje</p>
               <p class="card-text text-center" style="margin-bottom: 0px;"> Program: Software Engineering</p>
-              <p class="card-text text-center"> Role: Web Developer</p>
+              <p class="card-text text-center"> Role: Front-end Developer</p>
             </div>
           </div>
 
-          <div class="card col-lg-4 m-2" style="width: 19rem;">
+          <div class="card col-lg-4" style="width: 19rem;">
             <img src="pictures/Nour.jpg" class="card-img-top teamPictures">
             <div class="card-body">
               <p class="card-text text-center" style="font-weight: bold; margin-bottom: 0px;">Nour Hadie Hassoun</p>
@@ -177,7 +186,7 @@
               <p class="card-text text-center"> Role: Project Manager</p>
             </div>
           </div>
-          <div class="card col-lg-4 m-2" style="width: 19rem;">
+          <div class="card col-lg-4" style="width: 19rem;">
             <img src="pictures/Mark.webp" class="card-img-top teamPictures">
             <div class="card-body">
               <p class="card-text text-center" style="font-weight: bold; margin-bottom: 0px;">Mark Tadros</p>
@@ -187,15 +196,15 @@
           </div>
           </div>
           <div class="row mt-3 justify-content-center">
-          <div class="card col-lg-6 m-2" style="width: 19rem;">
+          <div class="card col-lg-6" style="width: 19rem;">
             <img src="pictures/ibrahim.jpg" class="card-img-top teamPictures">
             <div class="card-body">
               <p class="card-text text-center" style="font-weight: bold; margin-bottom: 0px;">Ibrahim Elyyan</p>
               <p class="card-text text-center" style="margin-bottom: 0px;"> Program: Computer Science</p>
-              <p class="card-text text-center"> Role: Web Developer</p>
+              <p class="card-text text-center"> Role: Back-end Developer</p>
             </div>
           </div>
-          <div class="card col-lg-6 m-2" style="width: 19rem;">
+          <div class="card col-lg-6" style="width: 19rem;">
             <img src="pictures/jose.jpg" class="card-img-top teamPictures">
             <div class="card-body">
               <p class="card-text text-center" style="font-weight: bold; margin-bottom: 0px;">Jose Semaan</p>
@@ -210,10 +219,7 @@
 </section>
 
 
-<footer style="background-color: #004643; color:white;" class="pt-5 pb-4">
-<h6 class="card-text text-center">Copyright <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
-  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
-</svg> 2024 All Rights Reserved by <Strong style="color:#A4E3B1;"> Smart Recycling</Strong></h6>
+<footer style="background-color: #004643;">
 
 </footer>
 
@@ -221,7 +227,11 @@
         <!--Custom js and bootstrap js library-->
         <script src="js/index.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script>
+          if(localStorage.getItem('loggedIn') !== 'true') {
+              window.location.href = 'login.html';
+          }
+          </script>
+          
     </body>
 </html>
-
-

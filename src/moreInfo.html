@@ -1,0 +1,203 @@
+
+<!-- in this page, we're explaining how we came up with the design of the app, the logo, the colors, ...
+
+We get to this page after clicking on "more info" in the "about" section
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    <!--Essentials-->
+    <meta charset="UTF-8">
+    <meta http-equiv="'X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+     <!-- Boostrap icons, custom bootstrap, and bootstrap css library-->
+     
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title> Smart Recycling System-more info</title>
+    </head>
+    <body>
+      <script>
+        if(localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+        if (localStorage.getItem('dark-mode') === 'true') {
+        document.body.classList.add("dark-mode");
+        }
+        </script>
+         <!--navbar-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+            <div class="container-fluid">
+               <a class="navbar-brand text-center" href="index.html">
+      <img src="pictures/leaf-logo.png"  width="50" height="44" class="d-inline-block align-text-top" alt="Smart Recycling"> 
+      
+    </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#aboutapp">About the app</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#earthNow">Earth Now</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#solution">Our Solution</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#team">The Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                  </li> 
+                  <li class="nav-item">
+                    <button  class="btn btn btn-outline-primary btn-sm mt-2 ms-1" onclick="myFunction()">mode</button>
+                  </li>
+                  <li class="nav-item">
+                    <button class="btn btn-outline-primary btn-sm mt-2 ms-1" onclick="logout()">Logout</button>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <script>
+            function logout() {
+                localStorage.setItem('loggedIn', 'false');
+                window.location.href = 'login.html';
+            }
+            </script>
+
+          <h1 class="h1 text-center m-3" style="font-size:50px;">App Creation</h1>
+          <div class="card mt-2 ms-4 me-4 mb-2">
+            <div class="row" style="margin-left: 150px; margin-right: 150px; margin-bottom:25px;">
+                <div class="card-body">
+                  <h5 class="card-title h2 resource" style=" font-size: 35px !important">How did we come up with the name?</h5>
+                  <p class="card-text h6 mt-4" style="font-size: 25px;">
+                  Coming up with the name <strong> "Smart Recycling" </strong>involved careful consideration of the main features and advantages that our app offers.&nbsp; 
+                We went through the following steps when choosing the name: </p>
+                  <p>
+                    <ul class="list-unstyled">
+                      <li style="font-size: 18px;" class="mb-4 mt-3 card-text">-<em style="text-decoration: underline;">Brainstorming</em>: We took notes of concepts related to recycling, and waste management</li>
+                      <li style="font-size: 18px;" class="mb-4 card-text">-<em style="text-decoration: underline;">Focus on Core Functionality</em>: Since our app revolves around image recognition, we wanted a name that emphasized this smart, tech-driven aspect.
+                         <br>The word <strong> "smart"</strong>  suggests intelligence, reflecting the AI component of our application.
+                        <br>The word <strong>"recycling"</strong> suggests sustainability and environmental consciousness.  </li>
+                      <li style="font-size: 18px;" class="mb-4 card-text">-<em style="text-decoration: underline;">Clarity And Simplicity:</em> The name <strong> "Smart Recycling"</strong> is clear and simple, yet conveys exactly the app's idea.</li>
+                      <li class="card-text" style="font-size: 18px;">-<em style="text-decoration: underline;">Market Research: </em>We made sure the name wasn't in use, but resonates with our target audience.</li>
+                        
+                    </ul>
+
+                  </p>
+                  
+                  
+        
+                </div>
+              </div>
+         
+              <div class="row" style="margin-left: 150px; margin-right: 150px; margin-bottom:25px;">
+                <div class="card-body">
+                    <h5 class="card-title h2 resource" style=" font-size: 35px !important">Explanation of the logo</h5>
+                    <div class="card mb-3" style="max-width: 2000px;">
+                      <div class="row  g-0">
+                        <div class="col-md-4">
+                          <img src="pictures/leaf-logo.png" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <p class="card-text pt-3 h4">
+                            Our logo is the Recycling Triangle Symbol, but instead of arrows we have leaves, 
+                            to emphasize on the eco-friendly aspect that our app is focusing on.  
+                          
+                            </p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+
+              <div class="row" style="margin-left: 150px; margin-right: 150px; margin-bottom:25px;">
+                <div class="card-body">
+                    <h5 class="card-title h2 resource" style=" font-size: 35px !important">Colors and Typography</h5>
+                  
+                  <img src="pictures/colorkit.png" style="height:225px; width:1000px;" class="mt-3 mb-3 colorKit">
+                    <p class="card-text h5" style="font-size: 25px;">
+                  Starting off with the choice of color, we went for something that is associated to nature and growth. 
+                  The dark grey helps in text readability, and serves as a neutral background when in dark mode. <br>
+                  Its combination with light green adds a balance, and a vibrant touch to the app.<br>
+                  The beautiful dark green gives depth and contrast when in light mode. <br>
+                  The use of green tones is very important to the user experience, as it creates a sense of calmness and harmony, and connection to nature.
+                  
+                    </p>
+
+                    <img src="pictures/Typography.png " class="mt-3 mb-3 typography">
+                    <p class="card-text h5"> We opted for a clean and modern aesthetic. <strong>Helvetica Neue</strong> is sophisticated, sans-serif, and easy to read without causing visual strain</p>
+                </div>
+              </div>
+
+              <div class="row" style="margin-left: 150px; margin-right: 150px; margin-bottom:25px;">
+              <div class="card-body">
+                <h5 class="card-title h2 resource" style=" font-size: 35px !important">User Persona</h5>
+          <img src="pictures/persona.jpg" class="mt-3 mb-3 persona">
+              </div>
+              </div>
+              </div>
+
+              <div class="row" style="margin-left: 150px; margin-right: 150px; margin-bottom:25px;">
+                <div class="card-body">
+                  <h5 class="card-title h2 resource" style=" font-size: 35px !important">User Flow Diagram</h5>
+            <img src="pictures/ufd.jpg" class="mt-3 mb-3 persona">
+                </div>
+                </div>
+                </div>
+
+                <div class="row" style="margin-left: 150px; margin-right: 150px; margin-bottom:25px;">
+                  <div class="card-body">
+                    <h5 class="card-title h2 resource" style=" font-size: 35px !important">Sketches</h5>
+              <img src="pictures/sketches.png" class="mt-3 mb-3 persona">
+                  </div>
+                  </div>
+                  </div>
+
+                  <div class="row" style="margin-left: 150px; margin-right: 150px; margin-bottom:25px;">
+                    <div class="card-body">
+                      <h5 class="card-title h2 resource" style=" font-size: 35px !important">Wireframes</h5>
+                <img src="pictures/Wireframe.jpg" class="mt-3 mb-3 persona">
+                    </div>
+                    </div>
+                    </div>
+
+                    <div>
+                      <a href="https://youtu.be/QoPFJPRXN_0" class="btn btn-primary mb-5" style="margin-left:50px;">
+                          See Full App Prototype!
+                      </a>
+                  </div>
+                  
+
+        
+
+
+
+<footer style="background-color: #004643; color:white;" class="pt-5 pb-4">
+<h6 class="card-text text-center">Copyright <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+</svg> 2024 All Rights Reserved by <Strong style="color:#A4E3B1;"> Smart Recycling</Strong></h6>
+
+</footer>
+
+
+<script src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    </body>
+    </html>

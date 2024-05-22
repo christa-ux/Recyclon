@@ -10,7 +10,7 @@ Recycling has never been easy, and not everyone has been taught how to recycle.
 
 That's how our app comes in handy. Not only does it teach the users how to recycle, but it has a point system, encouraging them to keep recycling and compete with their friends.
 
-ed
+
 ## Team Members
 
 Christa Abou Arraje 

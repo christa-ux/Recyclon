@@ -13,15 +13,13 @@ That's how our app comes in handy. Not only does it teach the users how to recyc
 
 ## Team Members
 
-Christa Abou Arraje (40226631)
+Christa Abou Arraje 
 
-Ibrahim Elyyan (40167982)
+Ibrahim Elyyan 
 
-Jose Semaan (40244141)
+Nour Hassoun 
 
-Mark Tadros (40250850)
-
-Nour Hassoun (40233077)
+Rama Alrifai
 
 
 ## Running the app

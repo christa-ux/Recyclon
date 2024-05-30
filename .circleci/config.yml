@@ -1,0 +1,55 @@
+# Couldn't automatically generate a config from your source code.
+# This is a generic template to serve as a base for your custom config
+# See: https://circleci.com/docs/configuration-reference
+# I added some custom stuff cuz css bootstrap was not detected :/
+# Stacks detected: deps:node:.
+version: 2.1
+
+orbs:
+  node: circleci/node@5
+
+jobs:
+  build-node:
+    # Build node project
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          name: Install Bootstrap
+          command: npm i bootstrap@5.3.3
+      - run:
+          name: Install Bootstrap Icons
+          command: npm i bootstrap-icons
+      #- run:
+      #    command: npm run build
+      - run:
+          name: Create the ~/artifacts directory if it doesn't exist
+          command: mkdir -p ~/artifacts
+      # Copy output to artifacts dir
+      - run:
+          name: Copy artifacts
+          command: cp -R build dist public .output .next .docusaurus ~/artifacts 2>/dev/null || true
+      - store_artifacts:
+          path: ~/artifacts
+          destination: node-build
+
+  deploy:
+    # This is an example deploy job, not actually used by the workflow
+    docker:
+      - image: cimg/base:stable
+    steps:
+      # Replace this with steps to deploy to users
+      - run:
+          name: deploy
+          command: '#e.g. ./deploy.sh'
+
+workflows:
+  build:
+    jobs:
+      - build-node
+    # - deploy:
+    #     requires:
+    #       - build-node
+     

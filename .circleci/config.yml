@@ -22,8 +22,8 @@ jobs:
       - run:
           name: Install Bootstrap Icons
           command: npm i bootstrap-icons
-      - run:
-          command: npm run build
+      #- run:
+      #    command: npm run build
       - run:
           name: Create the ~/artifacts directory if it doesn't exist
           command: mkdir -p ~/artifacts

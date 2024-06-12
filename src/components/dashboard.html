@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Essentials-->
+    <meta charset="UTF-8">
+    <meta http-equiv="'X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- Boostrap icons, custom bootstrap, and bootstrap css library-->
+    <link rel="stylesheet" >
+    <link href=>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Smart Recycling System - Dashboard</title>
+</head>
+<body>
+    <script>
+    if(localStorage.getItem('loggedIn') !== 'true') {
+        window.location.href = 'login.vue';
+    }
+    if (localStorage.getItem('dark-mode') === 'true') {
+    document.body.classList.add("dark-mode");
+    }
+    </script>
+
+    <script>
+    function logout() {
+        localStorage.setItem('loggedIn', 'false');
+        window.location.href = 'login.vue';
+    }
+    </script>
+
+    <div class="container">
+        <h2>Hello, John!</h2>
+        <p>Total Points: 48</p>
+
+        <h3>Point System</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Material</th>
+            <th scope="col">Points</th>
+            <th scope="col">Symbol</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Paper</td>
+            <td>2</td>
+            <td><img src="pictures/paper.png" alt="Paper" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Plastic</td>
+            <td>2</td>
+            <td><img src="pictures/plastic.png" alt="Plastic" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Glass</td>
+            <td>5</td>
+            <td><img src="pictures/glass.png" alt="Glass" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Metal</td>
+            <td>5</td>
+            <td><img src="pictures/metal.png" alt="Metal" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Chemical</td>
+            <td>10</td>
+            <td><img src="pictures/chemical.png" alt="Chemical" width="30" height="30"></td>
+        </tr>
+        
+    </tbody>
+</table>
+<p>
+  Our point system is set up to motivate and appreciate recycling work. Each type of recyclable material has a specific point value. For instance, recycling paper and plastic items will get you 2 points each. Glass and metal items earn 5 points each, while chemical items can earn you 10 points each. The more you recycle, the more points you accumulate. These points can be monitored in your personal dashboard, giving you a concrete way to see your environmental contribution. Keep up the good work and happy recycling!
+</p>
+
+
+
+<h3>Recycling History</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Date</th>
+            <th scope="col">Points</th>
+            <th scope="col">Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Plastic Bottle</td>
+            <td>April 15, 2024</td>
+            <td>2</td>
+            <td><img src="pictures/plastic.png" alt="Plastic" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Metal Can</td>
+            <td>April 14, 2024</td>
+            <td>5</td>
+            <td><img src="pictures/metal.png" alt="Metal" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Glass Bottle</td>
+            <td>April 13, 2024</td>
+            <td>5</td>
+            <td><img src="pictures/glass.png" alt="Glass" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Paper Bag</td>
+            <td>April 12, 2024</td>
+            <td>2</td>
+            <td><img src="pictures/paper.png" alt="Paper" width="30" height="30"></td>
+        </tr>
+        <tr>
+            <td>Chemical Container</td>
+            <td>April 11, 2024</td>
+            <td>10</td>
+            <td><img src="pictures/chemical.png" alt="Chemical" width="30" height="30"></td>
+        </tr>
+        <tr>
+          <td>Plastic Bag</td>
+          <td>April 10, 2024</td>
+          <td>2</td>
+          <td><img src="pictures/plastic.png" alt="Plastic" width="30" height="30"></td>
+      </tr>
+      <tr>
+          <td>Metal Bottle Cap</td>
+          <td>April 9, 2024</td>
+          <td>5</td>
+          <td><img src="pictures/metal.png" alt="Metal" width="30" height="30"></td>
+      </tr>
+      <tr>
+          <td>Glass Jar</td>
+          <td>April 8, 2024</td>
+          <td>5</td>
+          <td><img src="pictures/glass.png" alt="Glass" width="30" height="30"></td>
+      </tr>
+      <tr>
+          <td>Newspaper</td>
+          <td>April 7, 2024</td>
+          <td>2</td>
+          <td><img src="pictures/paper.png" alt="Paper" width="30" height="30"></td>
+      </tr>
+      <tr>
+          <td>Chemical Bottle</td>
+          <td>April 6, 2024</td>
+          <td>10</td>
+          <td><img src="pictures/chemical.png" alt="Chemical" width="30" height="30"></td>
+      </tr>
+      
+    </tbody>
+</table>
+
+
+
+    </div>
+    <footer style="background-color: #004643; color:white;" class="pt-5 pb-4">
+      <h6 class="card-text text-center">Copyright <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+      </svg> 2024 All Rights Reserved by <Strong style="color:#A4E3B1;"> Smart Recycling</Strong></h6>
+      
+      </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>

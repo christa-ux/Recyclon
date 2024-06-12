@@ -1,4 +1,4 @@
-# Smart-Recycling
+# Recyclon
 
 ## About 
 

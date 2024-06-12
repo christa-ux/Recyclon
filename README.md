@@ -2,7 +2,7 @@
 
 ## About 
 
-Our app called "Smart Recycling" aims at improving the sorting of recyclables from non-recyclables using image recognition. 
+Our app called "Recyclon" aims at improving the sorting of recyclables from non-recyclables using image recognition. 
 
 When a user scans an object, the app returns a feedback to the user about the appropriate bin for that item.
 

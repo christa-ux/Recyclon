@@ -1,5 +1,7 @@
 <script setup>
 import Nav from './components/nav.vue';
+import SignIn from './components/auth/signIn.vue'
+import SignUp from './components/auth/signUp.vue'
 // export default {
 // 	components: { Nav },
 // }
@@ -10,6 +12,8 @@ import LogIn from './components/auth/signIn.vue'
 <template>
   <div>
 	<Nav></Nav>
+	<SignIn></SignIn>
+	<SignUp></SignUp>
 	
    
     

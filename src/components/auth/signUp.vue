@@ -9,8 +9,8 @@
             </div>
 
             <div class="user-box">
-                <input type="email" name="email" id="email" v-model.trim="email" required @blur="checkEmail">
-                <label>Email</label>
+                <input type="username" name="username" id="username" v-model.trim="username" required @blur="checkusername">
+                <label>username</label>
             </div>
 
             <div class="user-box">
@@ -49,7 +49,8 @@ import { useStore } from 'vuex';
 
 /* Data */
 const name = ref('');
-const email = ref('');
+/* const email = ref(''); */
+const username = ref('');
 const password = ref('');
 const city = ref('');
 const errorMsg = ref('');
@@ -59,32 +60,25 @@ const store = useStore();
 const signUp = async () => {
     try {
         await store.dispatch('user/signUp', {
-            email: email.value,
+            username: username.value,
             password: password.value,
             name: name.value,
             city: city.value,
-            language: 'en',
-            temperatureUnit: 'celsius',
-            timeFormat: '24',
-            location: 'autoDetect',
-            weatherAlerts: false,
-            notification: false,
-            notificationSchedule: '08:00',
             darkMode: false,
         });
 
         router.push('/');
     } catch (error) {
-      if (error.message === 'Firebase: Error (auth/email-already-in-use).') errorMsg.value = 'Email already in use. Please enter another email.';
+      if (error.message === 'Firebase: Error (auth/username-already-in-use).') errorMsg.value = 'username already in use. Please enter another username.';
       else errorMsg.value === 'Faild to login';
     }
 }
 
-    const checkEmail = () =>{
-      const emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/);
-    if (!emailRegex.test(email.value)) {
-        console.log(email.value);
-        errorMsg.value = 'Please enter a valid email address.';
+    const checkusername = () =>{
+      const usernameRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/);
+    if (!usernameRegex.test(username.value)) {
+        console.log(username.value);
+        errorMsg.value = 'Please enter a valid username address.';
       } else {
         errorMsg.value = '';
       }
@@ -100,6 +94,7 @@ const checkPassword = () =>{
 }
 
 </script>
+
 <style scoped>
 @media (max-width: 600px) {
   .user-box {

@@ -2,14 +2,17 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
 import { getDatabase  } from 'firebase/database';
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  //apiKey: "AIzaSyAY-8oEFhrHWxcJD4xJI0lXcK4_ZmGt9q8",
-  authDomain: "recyclon.firebaseapp.com",
-  projectId: "recyclon",
-  storageBucket: "recyclon.appspot.com",
-  //messagingSenderId: "752905052866",
-  //appId: "1:752905052866:web:b9ef8f518112877783515b"
+  apiKey: "AIzaSyCiPGE0BnuilFHcshCuzoXi8AkI1tth_zE",
+  authDomain: "recyclon-16414.firebaseapp.com",
+  projectId: "recyclon-16414",
+  storageBucket: "recyclon-16414.appspot.com",
+  messagingSenderId: "103330130204",
+  appId: "1:103330130204:web:0cce9313859a0ed95272d9",
+  measurementId: "G-Q9PVDKXF2D"
 };
+
 
 // Initialize Firebase
 const fireApp = initializeApp(firebaseConfig);

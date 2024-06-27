@@ -21,61 +21,43 @@ const mutations = {
 
 const actions = {
     async signIn(context, payload) {
-        console.log('Signing in user', payload.email);
-
-        await signInWithEmailAndPassword(auth, payload.email, payload.password)
-            .then((userCredential) => {
-                console.log('User signed in');
-                context.commit('setUserId', userCredential.user.uid);
-                context.dispatch('syncUserData');
-            })
-            .catch((error) => {
-                console.log('Error signing in', error);
-                throw new Error(error.message || 'Failed to sign in');
-            });
-    },
-    async signOut(context) {
-        console.log('Signing out user');
-
-        await signOut(auth).then(() => {
-            console.log('User signed out');
-            context.commit('setUserId', null);
-            context.commit('setUserData', null);
-        }).catch((error) => {
-            console.log('Error signing out', error);
-            throw new Error(error.message || 'Failed to sign out');
-        });
-    },
-    async signUp(context, payload) {
-        console.log('Signing up user', payload);
-
-        await createUserWithEmailAndPassword(auth, payload.email, payload.password)
-            .then((userCredential) => {
-                console.log('User signed up');
-                context.commit('setUserId', userCredential.user.uid);
-
-                delete payload.password;
-                context.dispatch('saveUserData', payload);
-            })
-            .catch((error) => {
-                console.log('Error signing up', error);
-                throw new Error(error.message || 'Failed to sign up');
-            });
-    },
-    async saveUserData(context, payload) {
-        console.log('Saving user data', payload);
-        const userRef = ref(db, 'users/' + context.state.userId);
-        
-        await set(userRef, payload)
-            .then(() => {
-                console.log('User data saved');
-                context.dispatch('syncUserData');
-            })
-            .catch((error) => {
-                console.log('Error saving user data', error);
-                throw new Error(error.message || 'Failed to save user data');
-            });
-    },
+        try {
+          const userCredential = await signInWithEmailAndPassword(auth, payload.email, payload.password);
+          context.commit('setUserId', userCredential.user.uid);
+          await context.dispatch('syncUserData');
+        } catch (error) {
+          throw new Error(error.message || 'Failed to sign in');
+        }
+      },
+      async signOut(context) {
+        try {
+          await signOut(auth);
+          context.commit('setUserId', null);
+          context.commit('setUserData', null);
+        } catch (error) {
+          throw new Error(error.message || 'Failed to sign out');
+        }
+      },
+      async signUp(context, payload) {
+        try {
+          const userCredential = await createUserWithEmailAndPassword(auth, payload.email, payload.password);
+          context.commit('setUserId', userCredential.user.uid);
+    
+          delete payload.password;
+          await context.dispatch('saveUserData', payload);
+        } catch (error) {
+          throw new Error(error.message || 'Failed to sign up');
+        }
+      },
+      async saveUserData(context, payload) {
+        const userRef = dbRef(db, 'users/' + context.state.userId);
+        try {
+          await set(userRef, payload);
+          await context.dispatch('syncUserData');
+        } catch (error) {
+          throw new Error(error.message || 'Failed to save user data');
+        }
+      },
     async updateUserData(context, payload) {
         console.log('Updating user', payload);
         const userRef = ref(db, 'users/' + context.state.userId);

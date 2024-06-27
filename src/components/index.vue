@@ -203,7 +203,7 @@
   export default {
   mounted() {
     if(localStorage.getItem('loggedIn') !== 'true') {
-      this.$router.push('login.vue');
+      this.$router.push('signIn.vue');
     }
     if (localStorage.getItem('dark-mode') === 'true') {
       document.body.classList.add("dark-mode");
@@ -212,7 +212,7 @@
   methods: {
     logout() {
       localStorage.setItem('loggedIn', 'false');
-      this.$router.push('login.vue'); //change 
+      this.$router.push('signIn.vue'); //change 
     }
   }
 }

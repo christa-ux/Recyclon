@@ -37,14 +37,28 @@ const router = useRouter();
 const store = useStore();
 
 /* Authenticates a user */
- const signIn = async () => {
+const signIn = async () => {
     try {
-        await store.dispatch('user/signIn', { username: username.value, password: password.value })
+        await store.dispatch('user/signIn', { username: username.value, password: password.value });
         router.replace('/');
     } catch (error) {
-      console.log(error.message);
-      if (error.message === 'Firebase: Error (auth/user-not-found).'|| error.message === 'Firebase: Error (auth/wrong-password).')
-             errorMsg.value = "Invalid credentials!";
+        console.log(error.message);
+        if (error.message.includes('auth/user-not-found') || error.message.includes('auth/wrong-password')) {
+            errorMsg.value = "Invalid credentials!";
+        }
     }
 };
   </script>
+
+<style scoped>
+@media (max-width: 600px) {
+  .user-box {
+    width: 80%;
+    margin-left: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20%;
+    
+  }
+}
+</style>
